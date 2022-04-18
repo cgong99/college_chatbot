@@ -1,7 +1,11 @@
 {
   "alabama": {
     "rooms": "TV",
-    "floor": "Gender: single",
+    "floor": {
+      "Gender": "single",
+      "bathrooms": "Community bathrooms, gender-neutral bathrooms",
+      "Lounges": "Study lounges on each floor"
+    },
     "hall ": {
       "kitchen": "Community kitchen w/ vending machines ",
       "lounges": "TV lounge, parlor w/ piano on 2nd floor",
@@ -24,7 +28,11 @@
   },
   "complex": {
     "rooms": "TV",
-    "floor": "Gender: single",
+    "floor": {
+      "Gender": "single",
+      "bathrooms": "Community bathrooms",
+      "Lounges": "Study lounges on each floor"
+    },
     "hall ": {
       "kitchen": "Community kitchen on ground floor",
       "lounges": "TV lounge w/ pool table, parlor ",
@@ -62,7 +70,11 @@
   },
   "eagle": {
     "rooms": "TV",
-    "floor": "Gender: Mixed",
+    "floor": {
+      "Gender": "Subtopic 1",
+      "bathrooms": "Community bathrooms, gender-neutral bathrooms",
+      "Lounges": "Study lounges on each floor"
+    },
     "hall ": {
       "kitchen": "Community kitchen w/ vending machines ",
       "lounges": "Common room w/ TV & fireplace, international student lounge",

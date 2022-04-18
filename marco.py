@@ -149,12 +149,11 @@ class FLOOR_PLAN(Macro):
     hall = self.db[hall_name]
     print(hall_name)
     all_link = hall["Floor Plan Link"]
-    res = "Here are the links to different floor plans of "+ hall_name +":\n\'"
+    res = "Here are the links to different floor plans of "+ hall_name +":\n"
     for type in all_link.keys():
-      res = res + "\n"+ type + ": " + all_link[type]
-      print(res)
-    res += '\''
-    return "'https://housing.emory.edu/_includes/documents/housing-options/halls/harris_single_std.pdf'"
+      res = res + "\n"+ type + ": `" + all_link[type]+"`"
+    print(res)
+    return res
 
 
 

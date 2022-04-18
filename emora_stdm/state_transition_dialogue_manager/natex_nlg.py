@@ -54,6 +54,7 @@ class NatexNLG:
             print('  {:15} {}'.format('Steps', '  ' + '-' * 60))
             print('    {:15} {}'.format('Original', self._expression))
         generation = self._compiler.compile(ngrams, vars, macros, debugging)
+        print(generation)
         if self.is_complete(generation):
             original_vars.update(vars)
             return generation
@@ -64,6 +65,7 @@ class NatexNLG:
         if string is None:
             string = self._expression
         if '_' in string:
+            print("_ this is in the string, not going to print")
             return False
         return bool(regex.fullmatch(r'[^$]*', string))
 
@@ -118,7 +120,7 @@ class NatexNLG:
         symbol: /[a-z_A-Z.0-9]+/
         """
         parser = Lark(grammar, parser='earley')
-
+        
         def __init__(self, natex):
             self._natex = natex
             self._parsed_tree = None

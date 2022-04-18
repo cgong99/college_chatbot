@@ -22,18 +22,18 @@ except Exception as e:
     print('Error loading Spacy', file=sys.stderr)
     print('Please run the following command:', file=sys.stderr)
     print('python -m spacy download en_core_web_md', file=sys.stderr)
-try:
-    nltk.data.find('wordnet')
-except:
-    nltk.download('wordnet')
-try:
-    nltk.find('averaged_perceptron_tagger')
-except:
-    nltk.download('averaged_perceptron_tagger')
-try:
-    nltk.find('vader_lexicon')
-except:
-    nltk.download('vader_lexicon')
+# try:
+#     nltk.data.find('wordnet')
+# except:
+#     nltk.download('wordnet')
+# try:
+#     nltk.find('averaged_perceptron_tagger')
+# except:
+#     nltk.download('averaged_perceptron_tagger')
+# try:
+#     nltk.find('vader_lexicon')
+# except:
+#     nltk.download('vader_lexicon')
 from emora_stdm.state_transition_dialogue_manager.wordnet import \
     related_synsets, wordnet_knowledge_base, lemmas_of
 from nltk.corpus import wordnet

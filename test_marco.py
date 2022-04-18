@@ -14,7 +14,9 @@ macros = {
   "GET_ROOM_TYPE": GET_ROOM_TYPE(),
   "GET_RATES": GET_RATES(),
   "RETURN_HALL_LIST": RETURN_HALL_LIST(),
-  "LOCATION": LOCATION(housing_info_path)
+  "LOCATION": LOCATION(housing_info_path),
+  "CONTACT_HALL": CONTACT_HALL(housing_info_path),
+  "FLOOR_PLAN": FLOOR_PLAN(housing_info_path)
 }
 
 
@@ -54,9 +56,9 @@ intro_hall = {
 
 test = {
   "state":'test',
-  '"Hello"':{
+  '"Hello"#SET($preferred_hall=alabama)':{
     '[{floor, plan}]': {
-      "hi there 'good'":'end'
+      '#FLOOR_PLAN(preferred_hall)':'end'
     }
   }
 }

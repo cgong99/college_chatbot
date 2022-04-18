@@ -1,6 +1,8 @@
 
+import imp
 from emora_stdm import DialogueFlow
 from emora_stdm import NatexNLG
+from NewNatexNLG import *
 
 chatbot = DialogueFlow('start')
 transitions = {
@@ -26,6 +28,10 @@ chatbot.load_transitions(transitions)
 
 if __name__ == '__main__':
     # chatbot.run(debugging=True)
-    # natex_nlg = NatexNLG('"hi there"')
-    natex_nlg = NatexNLG('#SET($is_adult=True)')
+    # natex_nlg = NatexNLG('"hi there" `$500`')
+    natex_nlg = NatexNLG("hi there `https://www.hi.com`")
+    natex_link = NewNatexNLG("Building Floor Plan`https://housing.emory.edu/i_ncludes`")
+    print(natex_link.generate(debugging=True))
     print(natex_nlg.generate(debugging=False))
+    # natex_nlg = NatexNLG('#SET($is_adult=True)')
+    # print(natex_nlg.generate(debugging=False))
