@@ -1,5 +1,6 @@
 
 from emora_stdm import DialogueFlow
+from emora_stdm import NatexNLG
 
 chatbot = DialogueFlow('start')
 transitions = {
@@ -23,46 +24,8 @@ transitions = {
 }
 chatbot.load_transitions(transitions)
 
-# chatbot = DialogueFlow('start')
-# transitions = {
-#     '"Hello."': {
-#         '#INT(Hi! How are you?)': {
-#             '"Good. How are you?"': {
-#                 '[{good, great, okay}]': {
-#                     '"That\'s great!" Bye!': 'end'
-#                 },
-#                 '{[bad, horrible, awful]}': {
-#                     '"Oh no! Bye!"': 'end'
-#                 },
-#                 'error': {
-#                     '"I do not understand! Bye!"': 'end'
-#                 }
-#             }
-#         },
-#         '#INT(Tell me the weather.)': {
-#             '"It is sunny out!"': {
-#                 'error': {
-#                     '"Bye!"': 'end'
-#                 }
-#             }
-#         }
-#     }
-# }
-# chatbot.load_transitions(transitions)
-
-# chatbot = DialogueFlow('start')
-# transitions = {
-#     'state': 'start',
-#     '"Hello!"': {
-#         '#INT(Hi! How are you?)': {
-#             '"Good! Bye bye!"': 'end'
-#         },
-#         '#INT(Tell me about the weather.)': {
-#             '"It is sunny!"': 'end'
-#         }
-#     }
-# }
-# chatbot.load_transitions(transitions)
-
 if __name__ == '__main__':
-    chatbot.run(debugging=True)
+    # chatbot.run(debugging=True)
+    # natex_nlg = NatexNLG('"hi there"')
+    natex_nlg = NatexNLG('#SET($is_adult=True)')
+    print(natex_nlg.generate(debugging=False))

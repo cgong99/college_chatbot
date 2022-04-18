@@ -58,20 +58,18 @@ df.add_system_transition(State.RESTART, State.START, restart)
 
 # USER QUESTIONS
 # 1. asking hall optinos
+df.add_user_transition(State.START, State.HALL_OPTIONS, '[what, {housing, options}]')
 # 2. housing rates/ costs/ fee/ .....
+df.add_user_transition(State.START, State.RATES, '[{rates, fee, cost}]')
 # 3. Date ddl
 # 4. Application
 # 5. Contacts
 # 6. Hall amenities
 # 7. Room amenities/ Floor plan
 
-
-# USER HALL OPTIONS
-df.add_user_transition(State.START, State.HALL_OPTIONS, '[what, {housing, options}]')
-# rates question
-df.add_user_transition(State.START, State.RATES, '[{rates, fee, cost}]')
 # specific hall
 df.add_user_transition(State.START, State.INTRO_HALLS, '$preferred_hall=#CATCH_HALLS()')
+
 
 
 

@@ -38,21 +38,32 @@ intro_hall = {
   "state": 'intro_hall',
   '"What do you want to know more about?"':{
     '[{where, location}]':{
-      '"Here is the location: " #LOCATION(preferred_hall)\n What else can I help you?': 'end'
+      '"Here is the location: " #LOCATION(preferred_hall) "\n What else can I help you?"': 'start'
     },
     '[{contact, contacts, number}]':{
-      '#CONTACT_HALL(preferred_hall)':'end'
+      '#CONTACT_HALL(preferred_hall)':'start'
     },
-
+    '[{floor, [floor, plan], [rooms, look, like]}]': {
+      '#FLOOR_PLAN(preferred_hall)': 'start'
+    },
     'error': {
       '"Sorry I don\'t know about this information."' : 'intro_hall'
     }
   }
 }
 
+test = {
+  "state":'test',
+  '"Hello"':{
+    '[{floor, plan}]': {
+      "hi there 'good'":'end'
+    }
+  }
+}
+
 if __name__ == '__main__':
 
-  chatbot = DialogueFlow('intro_hall', initial_speaker=DialogueFlow.Speaker.SYSTEM, macros=macros)
-  chatbot.load_transitions(intro_hall)
+  chatbot = DialogueFlow('test', initial_speaker=DialogueFlow.Speaker.SYSTEM, macros=macros)
+  chatbot.load_transitions(test)
   chatbot.run(debugging=False)
 

@@ -1,10 +1,10 @@
 import sys
 from time import time
 import nltk
-try:
-    nltk.data.find('wordnet')
-except:
-    nltk.download('wordnet')
+# try:
+#     nltk.data.find('wordnet')
+# except:
+#     nltk.download('wordnet')
 
 from nltk.corpus import wordnet as wn
 import os

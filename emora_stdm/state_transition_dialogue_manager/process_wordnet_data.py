@@ -1,9 +1,9 @@
 import os
 import nltk
-try:
-    nltk.data.find('wordnet')
-except:
-    nltk.download('wordnet')
+# try:
+#     nltk.data.find('wordnet')
+# except:
+#     nltk.download('wordnet')
 
 from nltk.corpus import wordnet as wn
 import emora_stdm.state_transition_dialogue_manager.wordnet as stdmwn
