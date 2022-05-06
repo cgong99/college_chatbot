@@ -147,12 +147,11 @@ class FLOOR_PLAN(Macro):
     print("*** FLOORPLAN ****")
     hall_name = vars[args[0]]
     hall = self.db[hall_name]
-    print(hall_name)
     all_link = hall["Floor Plan Link"]
     res = "Here are the links to different floor plans of "+ hall_name +":\n"
     for type in all_link.keys():
       res = res + "\n"+ type + ": `" + all_link[type]+"`"
-    print(res)
+    # print(res)
     return res
 
 

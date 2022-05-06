@@ -1,6 +1,11 @@
 {
   "alabama": {
-    "rooms": "TV",
+    "rooms": {
+      "type": "single",
+      "bathrooms": "Community bathrooms, sink and mirror in room\n\n5th floor only - Shared bathrooms in suites",
+      "closet": "Wardrobe",
+      "furniture": "Medium Loft Bed (60\"), dresser, side table, desk & chair\n\n5th floor only - Junior Loft Bed (36\")"
+    },
     "floor": {
       "Gender": "single",
       "bathrooms": "Community bathrooms, gender-neutral bathrooms",
@@ -27,7 +32,12 @@
     }
   },
   "complex": {
-    "rooms": "TV",
+    "rooms": {
+      "type": "doubles",
+      "bathrooms": "Community bathrooms, sink and mirror in room",
+      "closet": "Built-in closet",
+      "furniture": "Medium loft bed (60\"), built-in dresser, desk & chair"
+    },
     "floor": {
       "Gender": "single",
       "bathrooms": "Community bathrooms",
@@ -69,9 +79,14 @@
     }
   },
   "eagle": {
-    "rooms": "TV",
+    "rooms": {
+      "type": "doubles",
+      "bathrooms": "Shared bathrooms in suites, sink and mirror in room",
+      "closet": "Built-in closet",
+      "furniture": "Medium loft bed (60\"), dresser, side table, desk & chair"
+    },
     "floor": {
-      "Gender": "Subtopic 1",
+      "Gender": "mixed",
       "bathrooms": "Community bathrooms, gender-neutral bathrooms",
       "Lounges": "Study lounges on each floor"
     },
@@ -94,8 +109,17 @@
     }
   },
   "hamilton": {
-    "rooms": "TV",
-    "floor": "Gender: Mixed",
+    "rooms": {
+      "type": "doubles",
+      "bathrooms": "Shared bathrooms in suites, sink and mirror in room",
+      "closet": "Built-in closet",
+      "furniture": "Medium loft bed (60\"), dresser, side table, desk & chair"
+    },
+    "floor": {
+      "Gender": "mixed",
+      "bathrooms": "Community bathrooms, gender-neutral bathrooms",
+      "Lounges": "Study lounges on each floor"
+    },
     "hall ": {
       "kitchen": "Community kitchen w/ vending machines ",
       "lounges": "TV lounge on ground floor",
@@ -116,8 +140,17 @@
     }
   },
   "raoul": {
-    "rooms": "TV",
-    "floor": "Gender: Mixed",
+    "rooms": {
+      "type": "singles",
+      "bathrooms": "Shared bathrooms in suites, sink and mirror in room",
+      "closet": "Built-in closet",
+      "furniture": "Medium loft bed (60\"), dresser, side table, desk & chair"
+    },
+    "floor": {
+      "Gender": "mixed",
+      "bathrooms": "Community bathrooms, gender-neutral bathrooms",
+      "Lounges": "Study lounges on each floor"
+    },
     "hall ": {
       "kitchen": "Community kitchen w/ vending machines on Ground & 1st Floor",
       "lounges": "Common room w/ TV on Ground & 1st floor",
@@ -140,8 +173,17 @@
     }
   },
   "turman": {
-    "rooms": "TV",
-    "floor": "Gender: grouped",
+    "rooms": {
+      "type": "singles",
+      "bathrooms": "Community style bathroom, sink and mirror in room",
+      "closet": "Built-in closet",
+      "furniture": "Twin XL Medium loft bed (60\"), dresser, desk & chair"
+    },
+    "floor": {
+      "Gender": "grouped",
+      "bathrooms": "Community bathrooms, gender-neutral bathrooms",
+      "Lounges": "Study lounges on each floor"
+    },
     "hall ": {
       "kitchen": "Community kitchen w/ vending machines on Ground & 1st Floor",
       "lounges": "TV lounge on ground floor",
@@ -162,8 +204,17 @@
     }
   },
   "dobbs": {
-    "rooms": "TV",
-    "floor": "Gender:grouped/single",
+    "rooms": {
+      "type": "doubles",
+      "bathrooms": "Community style bathroom, sink and mirror in room",
+      "closet": "Wardrobe",
+      "furniture": "Medium loft bed (60\"), dresser, desk & chair"
+    },
+    "floor": {
+      "Gender": "grouped/single",
+      "bathrooms": "Community bathrooms, gender-neutral bathrooms",
+      "Lounges": "None"
+    },
     "hall ": {
       "kitchen": "Community kitchen w/ vending machines on Ground & 1st Floor",
       "lounges": "TV & study lounge on 3rd floor and courtyard",
@@ -183,8 +234,17 @@
     }
   },
   "harris": {
-    "rooms": "TV",
-    "floor": "Gender: Mixed",
+    "rooms": {
+      "type": "doubles",
+      "bathrooms": "Community bathrooms, sink and mirror in room",
+      "closet": "Wardrobe",
+      "furniture": ""
+    },
+    "floor": {
+      "Gender": "mixed",
+      "bathrooms": "Community bathrooms, gender-neutral bathrooms",
+      "Lounges": "Study lounges on each floor"
+    },
     "hall ": {
       "kitchen": "Community kitchen w/ vending machines ",
       "lounges": "TV lounge, parlor w/ piano on 2nd floor",

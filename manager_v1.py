@@ -1,5 +1,6 @@
 
 from emora_stdm import CompositeDialogueFlow,DialogueFlow,Macro
+from new_dialogue_flow import *
 import sys
 sys.path.append('/Users/gongchen/Emora/emora_stdm')
 from enum import Enum
@@ -40,7 +41,8 @@ macros = {
   "FLOOR_PLAN": FLOOR_PLAN(housing_info_path)
 }
 
-df = DialogueFlow(State.START, initial_speaker=DialogueFlow.Speaker.SYSTEM, macros=macros)
+#Use new DialogueFlow for free output format
+df = NewDialogueFlow(State.START, initial_speaker=DialogueFlow.Speaker.SYSTEM, macros=macros)
 
 
 
