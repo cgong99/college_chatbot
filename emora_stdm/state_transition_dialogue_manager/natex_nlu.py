@@ -148,7 +148,7 @@ class NatexNLU:
             self._vars = vars
             self._macros = macros
             self._debugging = debugging
-            re = self.visit(self._tree).children[0]
+            re = self.visit(self._tree).children[0]  # visited marco here
             self._tree = None
             self._ngrams = None
             self._vars = None

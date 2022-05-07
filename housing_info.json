@@ -1,7 +1,7 @@
 {
   "alabama": {
     "rooms": {
-      "type": "single",
+      "type": "single, double, suite",
       "bathrooms": "Community bathrooms, sink and mirror in room\n\n5th floor only - Shared bathrooms in suites",
       "closet": "Wardrobe",
       "furniture": "Medium Loft Bed (60\"), dresser, side table, desk & chair\n\n5th floor only - Junior Loft Bed (36\")"
@@ -80,7 +80,7 @@
   },
   "eagle": {
     "rooms": {
-      "type": "doubles",
+      "type": "doubles, triples",
       "bathrooms": "Shared bathrooms in suites, sink and mirror in room",
       "closet": "Built-in closet",
       "furniture": "Medium loft bed (60\"), dresser, side table, desk & chair"
@@ -110,7 +110,7 @@
   },
   "hamilton": {
     "rooms": {
-      "type": "doubles",
+      "type": "doubles, suites",
       "bathrooms": "Shared bathrooms in suites, sink and mirror in room",
       "closet": "Built-in closet",
       "furniture": "Medium loft bed (60\"), dresser, side table, desk & chair"
@@ -141,7 +141,7 @@
   },
   "raoul": {
     "rooms": {
-      "type": "singles",
+      "type": "singles, doubles, triples",
       "bathrooms": "Shared bathrooms in suites, sink and mirror in room",
       "closet": "Built-in closet",
       "furniture": "Medium loft bed (60\"), dresser, side table, desk & chair"
@@ -174,7 +174,7 @@
   },
   "turman": {
     "rooms": {
-      "type": "singles",
+      "type": "singles, doubles",
       "bathrooms": "Community style bathroom, sink and mirror in room",
       "closet": "Built-in closet",
       "furniture": "Twin XL Medium loft bed (60\"), dresser, desk & chair"
@@ -235,7 +235,7 @@
   },
   "harris": {
     "rooms": {
-      "type": "doubles",
+      "type": "doubles, singles, singles",
       "bathrooms": "Community bathrooms, sink and mirror in room",
       "closet": "Wardrobe",
       "furniture": ""
@@ -263,6 +263,13 @@
         "title": "Complex Director - Harris Hall",
         "email": "daniela.munozrogers@emory.edu"
       }
+    }
+  },
+  "general info": {
+    "bed": "twin bed",
+    "date": {
+      "move in": "August 20, 2022",
+      "move out": "TBA"
     }
   }
 }

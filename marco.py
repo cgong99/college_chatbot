@@ -35,15 +35,7 @@ class CATCH_HALL(Macro):
 
   def run(self, ngrams, vars, args):
       """Performs operation"""
-      print("**test catch hall**")
-      # print(ngrams)
-      # # print(self.halls)
-      # print(ngrams & self.halls)
-      for token in ngrams:
-        for hall_name in hall_names:
-          if token in hall_name:
-            return hall_name
-          
+      
       return ngrams & self.halls
 
 
@@ -103,14 +95,12 @@ class RETURN_HALL_LIST(Macro):
 
 class LOCATION(Macro):
   def __init__(self, path):
-    print("****location init*****")
     self.path = path
     with open(self.path, 'r') as f:
       self.db = json.load(f)
 
   def run(self, ngrams, vars, args):
     # input hall name
-    print("***enterred location ****")
     # print(args[0])
     # print(vars[args[0]])
 
@@ -126,7 +116,6 @@ class CONTACT_HALL(Macro):
 
   def run(self, ngrams, vars, args):
     # input hall name
-    print("*** CONTACT ****")
     hall = vars[args[0]]
     staff = self.db[hall]['Staff']
     staff_name = list(staff.keys())[0]
@@ -144,24 +133,52 @@ class FLOOR_PLAN(Macro):
 
   def run(self, ngrams, vars, args):
     # input hall name
-    print("*** FLOORPLAN ****")
     hall_name = vars[args[0]]
     hall = self.db[hall_name]
+    room_info = hall['rooms']
+  
+    res = room_info['type'] + " are offered at " + hall_name + ".\n"
     all_link = hall["Floor Plan Link"]
-    res = "Here are the links to different floor plans of "+ hall_name +":\n"
+    res += "Here are the links to different floor plans of "+ hall_name +":\n"
     for type in all_link.keys():
       res = res + "\n"+ type + ": `" + all_link[type]+"`"
-    # print(res)
     return res
 
 
 
 class AMENITIES(Macro):
   # generate amenities response to each specific hall
-    def __init__(self):
-      """init knowledge graph here"""
-      pass
+  def __init__(self, path):
+    self.path = path
+    with open(self.path, 'r') as f:
+      self.db = json.load(f)
     
     def run(self, ngrams, vars, args):
       """use arguments to query for data"""
+      hall_name = vars[args[0]]
+      hall = self.db[hall_name]
+      room_info = hall['rooms']
+      bed = self.db['general info'][bed]
+      
       pass
+    
+
+class MOVEIN(Macro):
+  def __init__(self, path):
+    self.path = path
+    with open(self.path, 'r') as f:
+      self.db = json.load(f)
+      
+  def run(self, ngrams, vars, args):
+    """use arguments to query for data"""
+    return self.db['general info']["move in"]
+
+class MOVEOUT(Macro):
+  def __init__(self, path):
+    self.path = path
+    with open(self.path, 'r') as f:
+      self.db = json.load(f)
+      
+  def run(self, ngrams, vars, args):
+    """use arguments to query for data"""
+    return self.db['general info']["move out"]

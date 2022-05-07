@@ -3,6 +3,10 @@ from emora_stdm import Macro
 from emora_stdm import DialogueFlow
 from typing import Union, Set, List, Dict, Callable, Tuple, NoReturn, Any
 from emora_stdm.state_transition_dialogue_manager.ngrams import Ngrams
+from emora_stdm.state_transition_dialogue_manager.macros_common import *
+
+
+
 
 class CheckIF(Macro):
     def run(self, ngrams: Ngrams, vars: Dict[str, Any], args: List[Any]):
